@@ -49,3 +49,22 @@ public class PROYECTOFINALALGORITMOS {
             }
         }
     }
+
+ private static void mostrarMenuPrincipal() {
+        System.out.println("Sistema de Votaciones");
+        System.out.println("1. Iniciar Sesion.");
+        System.out.println("2. Crear Usuario.");
+        System.out.println("3. Modificar Usuario");
+        System.out.println("4. Deshabilitar Usuario");
+        System.out.println("5. Salir.");
+        System.out.print("Ingrese una opción: ");
+    }
+    private static void iniciarSesion(Scanner scan, String contrasenaSistema) {
+        System.out.println("Iniciar Sesion");
+        System.out.println("1. COMO ADMINISTRADOR");
+        System.out.println("2. REGISTRADOR");
+        System.out.println("3. COMO VOTANTE");
+        System.out.println("4. COMO AUDITOR");
+        System.out.println("5. SALIR DEL SISTEMA");
+        System.out.print("Ingrese una opción: ");
+        int opcI = scan.nextInt();
