@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+
+
+package proyectofinalalgoritmos;
+
+import java.io.*;
+import java.nio.file.*;
+import java.util.Scanner;
+
+public class PROYECTOFINALALGORITMOS {
+    
+
+
+    /**
+     * @param args the command line arguments
+     */
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) throws IOException{
+        
+// TODO code application logic here
+       Scanner scan = new Scanner(System.in);
+        
+        System.out.println("SISTEMA DE VOTACIONES 2023");
+        System.out.println("ELIJA UNA OPCION");
+        int opcion1 = 0;
+
+        while (opcion1 != 5) {
+            mostrarMenuPrincipal();
+            opcion1 = scan.nextInt();
+            switch (opcion1) {
+                case 2:
+                    registrarUsuario(scan);
+                    break;
+                case 3:
+                    modificarUsuario();
+                    break;
+                case 4:
+                    deshabilitarUsuario();
+                    break;
+                case 5:
+                    System.out.println("Saliendo del sistema.");
+                    break;
+                default:
+                    System.out.println("Opción incorrecta.");
+            }
+        }
+    }
