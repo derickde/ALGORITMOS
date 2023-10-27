@@ -68,3 +68,70 @@ public class PROYECTOFINALALGORITMOS {
         System.out.println("5. SALIR DEL SISTEMA");
         System.out.print("Ingrese una opción: ");
         int opcI = scan.nextInt();
+// Crear usuario y Votar
+                
+                
+              String COR, PASS;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su CUI:");
+            int CUI = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        COR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        PASS = scanner.nextLine();
+        System.out.println("Registro exitoso!");
+        System.out.println("INGRESAR DATOS PARA VOTAR");
+        System.out.println("Ingrese su CUI:");
+        int CUU = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        String COOR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String PASW = scanner.nextLine();
+        if (CUU == CUI && COOR.equals(COR) && PASW.equals(PASS)) {
+            System.out.println("LOS CANDIDATOS PARA VOTAR SON LOS SIGUIENTES:");
+            System.out.println("1. SANDRA TORRES (UNE)");
+            System.out.println("2. BERNARDO AREVALO (MOVIMIENTO SEMILLA)");
+            System.out.println("3. EDMOND MULET (CABAL)");
+            System.out.println("4. ZURY RIOS (UNIONISTA)");
+            System.out.println("INGRESE EL NUMERO DEL CANDIDATO POR EL CUAL DESEA VOTAR?");
+            String voto = scanner.nextLine();
+            int UNE = 0;
+            int semilla = 0;
+            int unionista = 0;
+            
+            
+            
+            switch (opcR) {
+            case 1:
+                UNE = UNE + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 2:
+                semilla = semilla + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 3:
+                int cabal = 0;
+                cabal = 1 + cabal;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+
+            case 4:
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                case 5:
+                    unionista = unionista + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                
+                
+            }
+            System.out.println("VOTACIONES HASTA AHORA");
+            System.out.println("VOTOS REGISTRADOS" + "" + "UNE:" + UNE + "" + "SEMILLA:" + semilla + " " + "CABAL:" + "" + "UNIONISTA:" + unionista);
+            System.out.println("PRESIONE 5 PARA REGRESAR AL MENU PRINCIPAL");
+            scanner.nextLine();
+        } else {
+            System.out.println("DATOS NO COINCIDEN, POR FAVOR REGISTRESE ANTES.");
+        }
