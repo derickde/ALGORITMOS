@@ -42,17 +42,19 @@ public class PROYECTOFINALALGORITMOS {
                     deshabilitarUsuario();
                     break;
                 case 5:
-                    System.out.println("Saliendo del sistema.");
+                    System.out.println("SALIR");
                     break;
                 default:
-                    System.out.println("Opción incorrecta.");
+                    System.out.println("OPCION NO VALIDA");
             }
         }
     }
 
- private static void mostrarMenuPrincipal() {
+  
+
+    private static void mostrarMenuPrincipal() {
         System.out.println("Sistema de Votaciones");
-        System.out.println("1. Iniciar Sesion.");
+        System.out.println("DEBE CREAR SU USUARIO PRIMERO Y LUEGO VOTAR");
         System.out.println("2. Crear Usuario.");
         System.out.println("3. Modificar Usuario");
         System.out.println("4. Deshabilitar Usuario");
@@ -68,7 +70,57 @@ public class PROYECTOFINALALGORITMOS {
         System.out.println("5. SALIR DEL SISTEMA");
         System.out.print("Ingrese una opción: ");
         int opcI = scan.nextInt();
-// Crear usuario y Votar
+
+        switch (opcI) {
+            case 1:
+                
+                System.out.println("HOLA ADMIN");
+                System.out.println("1. COMO AD");
+                break;
+            case 2:
+                // Iniciar sesión como registrador
+                
+                System.out.println("HOLA ADMIN");
+                
+                break;
+            case 3:
+                // Iniciar sesión como votante
+                
+                System.out.println("HOLA ADMIN");
+                
+                break;
+            case 4:
+                // Iniciar sesión como auditor
+                
+                System.out.println("HOLA ADMIN");
+                
+                
+                break;
+            case 5:
+                
+                System.out.println("HOLA ADMIN");
+                
+                
+                break;
+            default:
+                System.out.println("Opción Incorrecta");
+        }
+    }
+
+    private static void registrarUsuario(Scanner scan) {
+        System.out.println("Registro de Usuarios");
+        System.out.println("1. USUARIO NUEVO Y VOTAR");
+        System.out.println("2. CAMBIAR CONTRASEÑA");
+        System.out.println("3. CAMBIAR USUARIO");
+        System.out.println("4. ELIMINAR USUARIO");
+        System.out.println("5. MENU PRINCIPAL");
+        System.out.println("6. SALIR DEL SISTEMA");
+        System.out.print("ELIJA UNA OPCION: ");
+        int opcR = scan.nextInt();
+
+        switch (opcR) {
+            case 1:
+                // Crear usuario y Votar
                 
                 
               String COR, PASS;
@@ -144,11 +196,11 @@ public class PROYECTOFINALALGORITMOS {
 
             case 3:
                 // Modificar usuario
-                // Implementa la lógica aquí
+                
                 break;
             case 4:
                 // Deshabilitar usuario
-                // Implementa la lógica aquí
+             
                 break;
             case 5:
                 // Regresar al menú principal
@@ -162,11 +214,11 @@ public class PROYECTOFINALALGORITMOS {
     }
 
     private static void modificarUsuario() {
-        // Implementa la lógica para modificar un usuario aquí
+        // modificar un usuario
     }
 
     private static void deshabilitarUsuario() {
-        // Implementa la lógica para deshabilitar un usuario aquí
+        // deshabilitar un usuario
         
         
     }
