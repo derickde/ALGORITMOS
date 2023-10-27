@@ -135,3 +135,41 @@ public class PROYECTOFINALALGORITMOS {
         } else {
             System.out.println("DATOS NO COINCIDEN, POR FAVOR REGISTRESE ANTES.");
         }
+                break;
+
+            case 2:
+                // cambiar la contraseña    
+                
+                break;
+
+            case 3:
+                // Modificar usuario
+                // Implementa la lógica aquí
+                break;
+            case 4:
+                // Deshabilitar usuario
+                // Implementa la lógica aquí
+                break;
+            case 5:
+                // Regresar al menú principal
+                break;
+            case 6:
+                System.out.println("Saliendo del sistema.");
+                break;
+            default:
+                System.out.println("Opción Incorrecta");
+        }
+    }
+
+    private static void modificarUsuario() {
+        // Implementa la lógica para modificar un usuario aquí
+    }
+
+    private static void deshabilitarUsuario() {
+        // Implementa la lógica para deshabilitar un usuario aquí
+        
+        
+    }
+
+    
+}
