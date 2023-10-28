@@ -1,0 +1,318 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+
+
+package proyectofinalalgoritmos;
+
+import java.io.*;
+import java.nio.file.*;
+import java.util.Scanner;
+
+public class PROYECTOFINALALGORITMOS {
+    
+    /**
+     * @param args the command line arguments
+     */
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) throws IOException{
+        
+// TODO code application logic here
+       Scanner scan = new Scanner(System.in);
+        
+        System.out.println("SISTEMA DE VOTACIONES 2023");
+        System.out.println("ELIJA UNA OPCION");
+        int opcion1 = 0;
+
+        while (opcion1 != 5) {
+            mostrarMenuPrincipal();
+            opcion1 = scan.nextInt();
+            switch (opcion1) {
+                case 2:
+                    registrarUsuario(scan);
+                    break;
+                case 3:
+                    modificarUsuario();
+                    break;
+                case 4:
+                    deshabilitarUsuario();
+                    break;
+                case 5:
+                    System.out.println("SALIR");
+                    break;
+                default:
+                    System.out.println("OPCION NO VALIDA");
+            }
+        }
+    }
+
+    private static void mostrarMenuPrincipal() {
+        System.out.println("Sistema de Votaciones");
+        System.out.println("DEBE CREAR SU USUARIO PRIMERO Y LUEGO VOTAR");
+        System.out.println("2. Crear Usuario.");
+        System.out.println("3. Modificar Usuario");
+        System.out.println("4. Deshabilitar Usuario");
+        System.out.println("5. Salir.");
+        System.out.print("Ingrese una opción: ");
+    }
+    private static void iniciarSesion(Scanner scan, String contrasenaSistema) {
+        System.out.println("Iniciar Sesion");
+        System.out.println("1. COMO ADMINISTRADOR");
+        System.out.println("2. REGISTRADOR");
+        System.out.println("3. COMO VOTANTE");
+        System.out.println("4. COMO AUDITOR");
+        System.out.println("5. SALIR DEL SISTEMA");
+        System.out.print("Ingrese una opción: ");
+        int opcI = scan.nextInt();
+
+        switch (opcI) {
+            case 1:
+                
+                System.out.println("HOLA ADMIN");
+                System.out.println("1. COMO AD");
+                break;
+            case 2:
+                // Iniciar sesión como registrador
+                
+                System.out.println("HOLA ADMIN");
+                
+                break;
+            case 3:
+                // Iniciar sesión como votante
+                
+                System.out.println("HOLA ADMIN");
+                
+                break;
+            case 4:
+                // Iniciar sesión como auditor
+                
+                System.out.println("HOLA ADMIN");
+                
+                
+                break;
+            case 5:
+                
+                System.out.println("HOLA ADMIN");
+                
+                
+                break;
+            default:
+                System.out.println("Opción Incorrecta");
+        }
+    }
+
+    private static void registrarUsuario(Scanner scan) {
+        System.out.println("Registro de Usuarios");
+        System.out.println("1. USUARIO NUEVO Y VOTAR");
+        System.out.println("2. CAMBIAR CONTRASEÑA");
+        System.out.println("3. CAMBIAR USUARIO");
+        System.out.println("4. ELIMINAR USUARIO");
+        System.out.println("5. MENU PRINCIPAL");
+        System.out.println("6. SALIR DEL SISTEMA");
+        System.out.print("ELIJA UNA OPCION: ");
+        int opcR = scan.nextInt();
+
+        switch (opcR) {
+            case 1:
+                // Crear usuario y Votar
+                                
+              String COR, PASS;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su CUI:");
+            int CUI = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        COR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        PASS = scanner.nextLine();
+        System.out.println("Registro exitoso!");
+        System.out.println("INGRESAR DATOS PARA VOTAR");
+        System.out.println("Ingrese su CUI:");
+        int CUU = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        String COOR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String PASW = scanner.nextLine();
+        if (CUU == CUI && COOR.equals(COR) && PASW.equals(PASS)) {
+            System.out.println("LOS CANDIDATOS PARA VOTAR SON LOS SIGUIENTES:");
+            System.out.println("1. SANDRA TORRES (UNE)");
+            System.out.println("2. BERNARDO AREVALO (MOVIMIENTO SEMILLA)");
+            System.out.println("3. EDMOND MULET (CABAL)");
+            System.out.println("4. ZURY RIOS (UNIONISTA)");
+            System.out.println("INGRESE EL NUMERO DEL CANDIDATO POR EL CUAL DESEA VOTAR?");
+            String voto = scanner.nextLine();
+            int UNE = 0;
+            int semilla = 0;
+            int unionista = 0;
+            
+            switch (opcR) {
+            case 1:
+                UNE = UNE + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 2:
+                semilla = semilla + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 3:
+                int cabal = 0;
+                cabal = 1 + cabal;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+
+            case 4:
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                case 5:
+                    unionista = unionista + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                    
+            }
+            System.out.println("VOTACIONES HASTA AHORA");
+            System.out.println("VOTOS REGISTRADOS" + "" + "UNE:" + UNE + "" + "SEMILLA:" + semilla + " " + "CABAL:" + "" + "UNIONISTA:" + unionista);
+            System.out.println("PRESIONE 5 PARA REGRESAR AL MENU PRINCIPAL");
+            scanner.nextLine();
+        } else {
+            System.out.println("DATOS NO COINCIDEN, POR FAVOR REGISTRESE ANTES.");
+        }
+                break;
+
+            case 2:
+                // cambiar la contraseña 
+                String XPASS;
+                Scanner nxscanner;
+            scanner = new Scanner(System.in);
+                System.out.println("INGRESE SU NUEVA CONTRASEÑA");
+                XPASS = scanner.nextLine();
+                System.out.println("CONTRASEÑA ACTUALIZADA");
+
+
+            case 3:
+                // Modificar usuario
+                String NCOR, NPASS;
+        Scanner nscanner;
+            scanner = new Scanner(System.in);
+        System.out.println("INGRESE EL NUEVO CUI:");
+            int NCUI = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("INGRESE EL NUEVO CORREO");
+        COR = scanner.nextLine();
+        System.out.println("INGRESE SU NUEVA CONTRASEÑA");
+        PASS = scanner.nextLine();
+        System.out.println("DATOS REEMPLAZADOS CON EXITO");
+        System.out.println("INGRESAR DATOS PARA VOTAR");
+        System.out.println("Ingrese su CUI:");
+        int NCUU = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        String NCOOR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String NPASW = scanner.nextLine();
+        System.out.println("Registro exitoso!");
+        System.out.println("INGRESAR DATOS PARA VOTAR");
+        System.out.println("Ingrese su CUI:");
+        int NECUU = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su correo electrónico:");
+        String NECOOR = scanner.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String NEPASW = scanner.nextLine();
+        if (NCUU == NCUI && NCOOR.equals(NCOOR) && NPASW.equals(PASS)) {
+            System.out.println("LOS CANDIDATOS PARA VOTAR SON LOS SIGUIENTES:");
+            System.out.println("1. SANDRA TORRES (UNE)");
+            System.out.println("2. BERNARDO AREVALO (MOVIMIENTO SEMILLA)");
+            System.out.println("3. EDMOND MULET (CABAL)");
+            System.out.println("4. ZURY RIOS (UNIONISTA)");
+            System.out.println("INGRESE EL NUMERO DEL CANDIDATO POR EL CUAL DESEA VOTAR?");
+            String voto = scanner.nextLine();
+            int UNE = 0;
+            int semilla = 0;
+            int unionista = 0;
+            
+            switch (opcR) {
+            case 1:
+                UNE = UNE + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 2:
+                semilla = semilla + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+            case 3:
+                int cabal = 0;
+                cabal = 1 + cabal;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+
+            case 4:
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                case 5:
+                    unionista = unionista + 1;
+                System.out.println("VOTO REGISTRADO CON EXITO");
+                break;
+                    
+            }
+            System.out.println("VOTACIONES HASTA AHORA");
+            System.out.println("VOTOS REGISTRADOS" + "" + "UNE:" + UNE + "" + "SEMILLA:" + semilla + " " + "CABAL:" + "" + "UNIONISTA:" + unionista);
+            System.out.println("PRESIONE 5 PARA REGRESAR AL MENU PRINCIPAL");
+            scanner.nextLine();
+        } else {
+            System.out.println("DATOS NO COINCIDEN, POR FAVOR REGISTRESE ANTES.");
+        }     
+                break;
+            case 4:
+                // Deshabilitar usuario
+                int ECUI = escanner.nextInt();
+                int ECOR = escanner.nextInt();
+                int EPASS = escanner.nextInt();
+                Scanner escanner = null;
+                System.out.println("INGRESE EL NUEVO CUI:");
+                escanner.nextInt();
+                System.out.println("INGRESE EL NUEVO CORREO");
+                ECOR = escanner.nextInt();
+                System.out.println("INGRESE SU NUEVA CONTRASEÑA");
+                EPASS = escanner.nextInt();
+                
+                ECUI = 0;
+                ECOR = 0;
+                EPASS = 0;
+                
+                System.out.println("USUARIO DESHABILITADO");
+                
+                
+                break;
+
+            case 5:
+                // Regresar al menú principal
+                break;
+            case 6:
+                System.out.println("Salir.");
+                break;
+            default:
+                System.out.println("Opción Incorrecta");
+                
+        }
+        
+    }
+    
+    private static void modificarUsuario() {
+        // modificar un usuario
+        
+        
+        
+    }
+
+    private static void deshabilitarUsuario() {
+        // deshabilitar un usuario
+        
+        
+    }
+    
+        
+    }
+
